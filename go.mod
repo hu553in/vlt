@@ -9,7 +9,7 @@ require (
 	github.com/atotto/clipboard v0.1.4
 	github.com/charmbracelet/colorprofile v0.4.3
 	github.com/charmbracelet/x/ansi v0.11.8
-	github.com/charmbracelet/x/exp/teatest/v2 v2.0.0-20260823001701-96af6d2cb5f6
+	github.com/charmbracelet/x/exp/teatest/v2 v2.0.0-20260906004030-3986e9119cf9
 	github.com/google/renameio/v2 v2.0.2
 	github.com/hashicorp/vault/api v1.23.0
 	github.com/pelletier/go-toml/v2 v2.4.3
