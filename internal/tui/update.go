@@ -733,6 +733,7 @@ func (model *Model) scrollPaneUnderPointer(message tea.MouseWheelMsg) {
 	}
 
 	var direction int
+	//nolint:exhaustive // Only vertical wheel buttons scroll a pane; the default ignores every other button.
 	switch message.Button {
 	case tea.MouseWheelUp:
 		direction = -1
