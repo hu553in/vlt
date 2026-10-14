@@ -11,25 +11,6 @@ PREK ?= prek
 ensure-build-dir:
 	mkdir -p -- "$(BUILD_DIR)"
 
-.PHONY: check-workflows
-check-workflows:
-	$(ACTIONLINT)
-
-.PHONY: check-renovate
-check-renovate:
-	bunx --package renovate renovate-config-validator --strict --no-global renovate.json
-
-.PHONY: check-hooks
-check-hooks:
-	$(PREK) validate-config prek.toml
-
-.PHONY: check
-check: lint check-hooks build check-deps check-vulns verify-test-coverage check-renovate check-workflows
-
-.PHONY: check-fix
-check-fix: lint-fix
-	$(MAKE) check
-
 .PHONY: install-deps
 install-deps:
 	go mod download
@@ -47,6 +28,15 @@ lint-fix:
 	$(TAPLO) fmt
 	golangci-lint fmt
 	golangci-lint run --fix
+
+.PHONY: check-hooks
+check-hooks:
+	$(PREK) validate-config prek.toml
+
+.PHONY: build
+build: ensure-build-dir install-deps
+	CGO_ENABLED=0 GOFLAGS="-buildvcs=false" \
+	go build -trimpath -ldflags="-s -w" -o "$(BUILD_DIR)/vlt" ./cmd/vlt
 
 .PHONY: check-deps
 check-deps: install-deps
@@ -66,19 +56,29 @@ test: ensure-build-dir install-deps
 		-coverpkg=./... \
 		./...
 
-.PHONY: verify-test-coverage
-verify-test-coverage: test
+.PHONY: check-coverage
+check-coverage: test
 	go tool go-test-coverage --config=./.testcoverage.yml --profile="$(BUILD_DIR)/coverage.out"
+
+.PHONY: check-renovate
+check-renovate:
+	bunx --package renovate renovate-config-validator --strict --no-global renovate.json
+
+.PHONY: check-workflows
+check-workflows:
+	$(ACTIONLINT)
+
+.PHONY: check
+check: lint check-hooks build check-deps check-vulns check-coverage check-renovate check-workflows
+
+.PHONY: check-fix
+check-fix: lint-fix
+	$(MAKE) check
 
 .PHONY: test-integration
 test-integration:
 	@command -v vault >/dev/null
 	VLT_INTEGRATION_VAULT_BINARY="$$(command -v vault)" $(MAKE) test
-
-.PHONY: build
-build: ensure-build-dir install-deps
-	CGO_ENABLED=0 GOFLAGS="-buildvcs=false" \
-	go build -trimpath -ldflags="-s -w" -o "$(BUILD_DIR)/vlt" ./cmd/vlt
 
 .PHONY: clean
 clean:

@@ -219,11 +219,11 @@ pinned in `go.mod`.
 make lint                  # Formatting and Go lint checks
 make lint-fix              # Automatic formatting and lint fixes
 make build                 # Build dist/vlt
-make test                  # Tests with race detection and dist/coverage.out
-make verify-test-coverage  # Tests and coverage threshold
-make test-integration      # All tests, including the real-Vault lifecycle
 make check-deps            # Verify go.mod and go.sum
 make check-vulns           # Reachable Go vulnerabilities
+make test                  # Tests with race detection and dist/coverage.out
+make check-coverage        # Tests and coverage threshold
+make test-integration      # All tests, including the real-Vault lifecycle
 make clean                 # Remove build and coverage output
 ```
 
