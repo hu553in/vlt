@@ -4,12 +4,12 @@ go 1.27.3
 
 require (
 	charm.land/bubbles/v2 v2.2.1
-	charm.land/bubbletea/v2 v2.1.0
+	charm.land/bubbletea/v2 v2.1.1
 	charm.land/lipgloss/v2 v2.0.6
 	github.com/atotto/clipboard v0.1.4
 	github.com/charmbracelet/colorprofile v0.4.3
 	github.com/charmbracelet/x/ansi v0.11.9
-	github.com/charmbracelet/x/exp/teatest/v2 v2.0.0-20261025003702-835ad0048169
+	github.com/charmbracelet/x/exp/teatest/v2 v2.0.0-20261028143050-ac49f62f807e
 	github.com/google/renameio/v2 v2.0.2
 	github.com/hashicorp/vault/api v1.23.0
 	github.com/pelletier/go-toml/v2 v2.4.3
