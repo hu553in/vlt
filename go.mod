@@ -29,7 +29,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.14.8 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/s3shared v1.20.8 // indirect
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.114.6 // indirect
-	github.com/aws/smithy-go v1.28.7 // indirect
+	github.com/aws/smithy-go v1.28.8 // indirect
 	github.com/aymanbagabas/go-udiff v0.4.1 // indirect
 	github.com/charmbracelet/ultraviolet v0.0.0-20261023060817-a45b7c86333f // indirect
 	github.com/charmbracelet/x/exp/golden v0.1.0 // indirect
