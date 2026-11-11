@@ -56,7 +56,7 @@ require (
 	github.com/rivo/uniseg v0.4.7 // indirect
 	github.com/rs/zerolog v1.35.1 // indirect
 	github.com/sahilm/fuzzy v0.1.3 // indirect
-	github.com/vladopajic/go-test-coverage/v2 v2.22.0 // indirect
+	github.com/vladopajic/go-test-coverage/v2 v2.23.0 // indirect
 	github.com/xo/terminfo v1.3.1 // indirect
 	golang.org/x/image v0.47.0 // indirect
 	golang.org/x/mod v0.42.0 // indirect
