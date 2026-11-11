@@ -125,8 +125,8 @@ github.com/sahilm/fuzzy v0.1.3/go.mod h1:au6//VbVSqu6DFrkL2CfjlJ5iURpNCPeE+1GwY3
 github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
 github.com/stretchr/testify v1.12.1 h1:EuwCh5fleGS7H32xRwO3wRGT7DxrDhLAT6FF8MpWDWE=
 github.com/stretchr/testify v1.12.1/go.mod h1:MDEgiDPPsNp5cuIrHPPCyornHKgEVbtFUmoNlxoYthg=
-github.com/vladopajic/go-test-coverage/v2 v2.22.0 h1:sfuptvEJ7YEs/60RPfGCa4Zh8Rbs3GPj2rQzdqO6dDs=
-github.com/vladopajic/go-test-coverage/v2 v2.22.0/go.mod h1:s+pQp0moQJa1rlvuIInmfHnY7HfL4uEUr6i/mX5x2G8=
+github.com/vladopajic/go-test-coverage/v2 v2.23.0 h1:D82VvQLL/550iJAPS3/ckhkMCjeD7QHMNq42t7UThNM=
+github.com/vladopajic/go-test-coverage/v2 v2.23.0/go.mod h1:s+pQp0moQJa1rlvuIInmfHnY7HfL4uEUr6i/mX5x2G8=
 github.com/xo/terminfo v1.3.1 h1:4ZwPCuu4PEFw0PkNp3Hv/x3gqvgLCzYhurszsj101cM=
 github.com/xo/terminfo v1.3.1/go.mod h1:lGzkSo8Fe7IRh/w+Gqz7n5mDog4FVXCj3gy/DYTBqio=
 go.shabbyrobe.org/gocovmerge v0.0.0-20230507111327-fa4f82cfbf4d h1:Ns9kd1Rwzw7t0BR8XMphenji4SmIoNZPn8zhYmaVKP8=
